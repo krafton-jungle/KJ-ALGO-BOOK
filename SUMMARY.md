@@ -4,6 +4,7 @@
 - [시간복잡도 / 공간복잡도](시간복잡도_공간복잡도/README.md)
 - [완전탐색 / 재귀](완전탐색_재귀/README.md)
 - [백트래킹 / 분할정복](백트래킹_분할정복/README.md)
+    - [백트래킹](recursion_concept/back_tracking/back_tracking.md)
 - [힙 정렬 / 퀵 정렬](힙정렬_퀵정렬/README.md)
 - [DP](DP/README.md)
 - [그리디](그리디/README.md)
