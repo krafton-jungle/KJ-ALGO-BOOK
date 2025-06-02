@@ -1,5 +1,25 @@
 # 알고리즘 나침반
 
+
+| 브랜치명(대항목) | 소항목 |
+|--------|--------|
+| analysis   |  시간복잡도 / 공간복잡도 (알고리즘 분석) |
+| recursion_concept  | 완전탐색 / 재귀 |
+| recursion_algo |  백트래킹 / 분할정복 |
+| sort  | 힙 정렬 / 퀵 정렬  |
+| dynamic_programming |  DP   |
+|  greedy  | 그리디 |
+| tree_algo |  이진 검색 트리  |
+| tree_concept   |  트리 개념 / B-tree    |
+| graph_concept  | 그래프 개념 / DFS / BFS|
+| graph_algo  | 벨만 포드 / 위상정렬 |
+| shortest_path_algo  | 최단경로 알고리즘(다익스트라 / 플로이드 워샬 / 최소 신장 트리)  |
+| key_based_algo  | 해시테이블 / 트라이    |
+| number_theory  | 정수론 |
+
+
+
+
 | 대항목 | 팀장 | 팀원 |
 |--------|--------|--------|
 | 시간복잡도 / 공간복잡도 (알고리즘 분석)   | 이지윤 | 김수민|
