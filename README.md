@@ -21,6 +21,12 @@
 <br>
 
 # Git 브랜치 작업 플로우
+## 브랜치 생성 방법
+1. git branch -r (원격 브랜치 확인)
+2. git branch [소주제] [대주제(원격 브랜치)]
+
+ex. git branch trie origin/ch15_trie (소주제 : trie, 대주제(원격브랜치) : origin/ch15_trie)
+
 ## 개발자 작업 과정
 1. 대항목 브랜치로 이동
 2. 개인 소항목 브랜치 생성
