@@ -5,7 +5,7 @@
 - 주로 데이터베이스, 파일 시스템 등 **대용량 데이터**를 다루는 환경에서 사용된다.
 - 항상 균형을 유지하므로 검색, 삽입, 삭제 연산에서 일관되고 효율적인 성능을 보장한다.
 
-![B-Tree](../assets/tree_concept/B-Tree.png)
+![B-Tree](../../assets/tree_concept/B-Tree.png)
 
 ---
 
@@ -87,7 +87,7 @@ B-Tree의 각 노드는 여러 개의 키를 포함하며, 키의 범위를 기�
 
 이때 키들은 분리 값(separation values) 역할을 하여 탐색 범위를 제한하고 탐색 효율을 높인다.
 
-![B-Tree_Search.png](../assets/tree_concept/B-Tree_Search.png)
+![B-Tree_Search.png](../../assets/tree_concept/B-Tree_Search.png)
 
 ---
 
@@ -112,7 +112,7 @@ B-Tree에서는 새로운 키를 **항상 리프 노드에 삽입**한다.
 - 중간 키는 부모 노드로 이동하여 삽입된다.
 - 삽입할 키가 분할된 두 노드 중 어느 쪽으로 가야 할지 판단하여, 적절한 자식 노드로 재귀적으로 삽입을 진행한다.
 
-![B-Tree_insert.png](../assets/tree_concept/B-Tree_insert.png)
+![B-Tree_insert.png](../../assets/tree_concept/B-Tree_insert.png)
 
 ---
 
@@ -128,7 +128,7 @@ B-Tree에서 삭제는 삽입보다 복잡하다.
 
 - 단순히 해당 키를 제거한다.
     
-    ![B-Tree_delete.png](../assets/tree_concept/B-Tree_delete_case1.png)
+    ![B-Tree_delete.png](../../assets/tree_concept/B-Tree_delete_case1.png)
     
 
 ### Case 2: **키가 내부 노드에 존재하는 경우**
@@ -139,7 +139,7 @@ B-Tree에서 삭제는 삽입보다 복잡하다.
 
 → `k`의 전임자 `k₀`를 찾아 `k`를 `k₀`로 대체하고, `k₀`를 재귀적으로 삭제한다.
 
-![B-Tree_delete.png](../assets/tree_concept/B-Tree_delete_ case2a.png)
+![B-Tree_delete.png](../../assets/tree_concept/B-Tree_delete_ case2a.png)
 
 
 **2b.** `k`의 오른쪽 자식에 **t개 이상의 키**가 있는 경우
@@ -150,7 +150,7 @@ B-Tree에서 삭제는 삽입보다 복잡하다.
 
 → `k`, 왼쪽 자식, 오른쪽 자식을 병합하여 하나의 노드로 만들고, 병합된 노드에서 `k`를 재귀적으로 삭제한다.
 
-![B-Tree_delete.png](../assets/tree_concept/B-Tree_delete_case2c.png)
+![B-Tree_delete.png](../../assets/tree_concept/B-Tree_delete_case2c.png)
 
 ### Case 3: **삭제할 키가 현재 노드에 없고 자식 노드로 내려가야 하는 경우**
 
@@ -160,13 +160,13 @@ B-Tree에서 삭제는 삽입보다 복잡하다.
 
 → 형제에게서 키를 하나 빌려와 현재 노드를 보강하고 하위로 내려간다.
 
-![B-Tree_delete.png](../assets/tree_concept/B-Tree_delete_case3a.png)
+![B-Tree_delete.png](../../assets/tree_concept/B-Tree_delete_case3a.png)
 
 **3b.** 현재 노드와 양쪽 형제가 모두 `t-1`개 키만 가진 경우
 
 → 한 형제와 병합하고 중간 키를 내려보낸 뒤, 병합된 노드에서 재귀적으로 삭제를 진행한다.
 
-![B-Tree_delete.png](../assets/tree_concept/B-Tree_delete_case3b.png)
+![B-Tree_delete.png](../../assets/tree_concept/B-Tree_delete_case3b.png)
 
 ### 특이 케이스: 루트 노드가 비게 되는 경우
 
