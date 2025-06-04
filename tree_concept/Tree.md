@@ -33,7 +33,8 @@
 
 이러한 명칭은 트리 구조를 분석하고 이해하는 데 필수적인 개념이다.
 
-![이진트리구성](assets/tree_concept/Tree_Structure.png)
+![이진트리구성](../../assets/tree_concept/tree/Tree_Structure.png)
+
 
 Figure 1. -트리 구성도
 
@@ -68,7 +69,7 @@ Figure 1. -트리 구성도
     루트에서 출발하여 다른 모든 노드에 도달할 수 있어야 한다.
     
 
-![트리가아닌예](assets/tree_concept/Not_Tree_Ex.png)
+![트리가아닌예](../../assets/tree_concept/tree/Not_Tree_Ex.png)
 
 Figure 2. 트리가 아닌 예
 
