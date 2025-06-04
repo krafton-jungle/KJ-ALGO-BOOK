@@ -174,7 +174,7 @@ B-Tree에서 삭제는 삽입보다 복잡하다.
 
 ---
 
-### 코드
+### Code
 
 ```c
 #include <stdio.h>
