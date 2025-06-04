@@ -29,8 +29,10 @@ git branch -r
 git branch [새 브랜치 이름] [원격 브랜치 이름]
 
 예시:
+```
 git branch trie origin/ch15_trie
-→ 'origin/ch15_trie' 원격 브랜치(대주제)를 기반으로, 'trie'라는 새 로컬 브랜치(소주제)를 만듭니다.
+```
+→ 원격 브랜치(대주제, 'origin/ch15_trie')를 기반으로, 새 로컬 브랜치(소주제, 'trie')를 만듭니다.
 
 ## 개발자 작업 과정
 1. 대항목 브랜치로 이동
