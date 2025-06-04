@@ -9,6 +9,8 @@
 - [그리디](greedy/README.md)
 - [이진 검색 트리](tree_algo/README.md)
 - [트리 개념 / B-Tree](tree_concept/README.md)
+    - [Tree](/tree_concept/tree/Tree.md)
+    - [B-Tree](/tree_concept/b-tree/b-tree.md)
 - [그래프 개념 / DFS / BFS](graph_concept/README.md)
 - [벨만 포드 / 위상정렬](graph_algo/README.md)
 - [다익스트라 / 플로이드 워샬](shortest_path_algo/README.md)
