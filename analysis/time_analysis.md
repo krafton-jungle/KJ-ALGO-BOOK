@@ -22,8 +22,16 @@
     - 이 증가량을 성장률(Growth Rate)이라고 한다.
     - 이 성장률을 통해 알고리즘이 얼마나 효율적인지 비교할 수 있다.
 
+
+  <div align="center">
+
   <img src="assets/time_complexity_chart.png" width="500"/>
-  <p align="center"><small>시간/ 공간 복잡도 속도 비교 차트</small></p>
+
+  <small>시간/공간 복잡도 속도 비교 차트</small>
+
+  </div>
+
+
 <br>
 
 
@@ -180,11 +188,12 @@ function fibonacci(n) {
 <br>
 
 # 7. 정렬별 시간&공간 복잡도 
-<br>
+<div align="center">
 
-<img src="assets/sorting_time_space_complexity.png" width="500"/>
-<p align="center"><small>정렬 별 시간/공간 복잡도 비교 차트</small></p>
-<br>
+  <img src="assets/sorting_time_space_complexity.png" width="500"/>
+  <small>시간/공간 복잡도 속도 비교 차트</small>
+
+  </div>
 
 # 8. 마무리 요약
 
