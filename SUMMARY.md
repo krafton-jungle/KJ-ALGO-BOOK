@@ -1,7 +1,7 @@
 # Summary
 
 - [소개](README.md)
-- [시간 복잡도 / 공간 복잡도](analysis/time_analysis.md)
+- [시간 복잡도 / 공간 복잡도](analysis/README.md)
     - [시간 복잡도](analysis/time_analysis.md)
     - [공간 복잡도](analysis/space_analysis.md)
 - [완전탐색 / 재귀](완전탐색_재귀/README.md)
