@@ -11,7 +11,10 @@
 - [트리 개념 / B-Tree](트리_BTree/README.md)
 - [그래프 개념 / DFS / BFS](그래프_DFS_BFS/README.md)
 - [벨만 포드 / 위상정렬](벨만포드_위상정렬/README.md)
-- [다익스트라 / 플로이드 워샬](shortest_path_algo/Dijkstra.md)
+- [다익스트라 / 플로이드 워샬](shortest_path_algo/README.md)
+    - [다익스트라](shortest_path_algo/Dijkstra.md)
+    - [플로이드 워샬]()
+    - [최소 신장 트리](shortest_path_algo/MST.md)
 - [트라이 / 최소 신장 트리](트라이_최소신장트리/README.md)
 - [정수론](./정수론/README.md)
 
