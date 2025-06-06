@@ -173,8 +173,8 @@ Trie(트라이) 자료 구조는 자동 완성(autocomplete), 철자 검사(spel
 
 ### References
 
-- https://www.geeksforgeeks.org/introduction-to-trie-data-structure-and-algorithm-tutorials
+- [geeks for geeks](https://www.geeksforgeeks.org/introduction-to-trie-data-structure-and-algorithm-tutorials)
 
-- https://en.wikipedia.org/wiki/Trie
+- [wikipedia](https://en.wikipedia.org/wiki/Trie)
 
-- https://www.youtube.com/watch?v=qA8l8TAMyig
+- [youtube](https://www.youtube.com/watch?v=qA8l8TAMyig)
