@@ -1,7 +1,9 @@
 # Summary
 
 - [소개](README.md)
-- [시간복잡도 / 공간복잡도](시간복잡도_공간복잡도/README.md)
+- [시간 복잡도 / 공간 복잡도](analysis/time_analysis.md)
+    - [시간 복잡도](analysis/time_analysis.md)
+    - [공간 복잡도](analysis/space_analysis.md)
 - [완전탐색 / 재귀](완전탐색_재귀/README.md)
 - [백트래킹 / 분할정복](백트래킹_분할정복/README.md)
 - [힙 정렬 / 퀵 정렬](힙정렬_퀵정렬/README.md)

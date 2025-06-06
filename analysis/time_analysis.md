@@ -105,7 +105,7 @@ function printAll(arr) {
 > 입력값이 증가해도 실행 시간은 완만하게 증가
 > 
 
-```
+```C
 function binarySearch(arr, target) {
   let left = 0, right = arr.length - 1;
   while (left <= right) {
