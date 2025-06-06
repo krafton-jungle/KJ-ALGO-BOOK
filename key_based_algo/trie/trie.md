@@ -73,7 +73,7 @@ Trie(트라이) 자료 구조는 자동 완성(autocomplete), 철자 검사(spel
    - 사용자가 검색 상자에 입력하는 내용에 따라 추천 결과를 제공합니다. Trie 자료 구조는 자동 완성 기능을 구현하는 데 사용된다.
 
 <div align="center">
-  <img src="assets/key_based_algo/Trie/autocompletion.png", width="300"/>
+  <img src="../../assets/key_based_algo/Trie/autocompletion.png", width="300"/>
   <p style="font-size: 10px;">Trie 자료구조를 활용한 자동완성 기능</p>
 </div>
 
@@ -102,7 +102,7 @@ Trie(트라이) 자료 구조는 자동 완성(autocomplete), 철자 검사(spel
 ## 배열
 
 <div align="center">
-  <img src="../assets/key_based_algo/Trie/trie-node-array.png" width=550"/>
+  <img src="../../assets/key_based_algo/Trie/trie-node-array.png" width=550"/>
   <p style="font-size: 10px;">Trie의 노드 Array 구현 방식</p>
 </div>
 
@@ -111,7 +111,7 @@ Trie(트라이) 자료 구조는 자동 완성(autocomplete), 철자 검사(spel
 ## 해시 맵
 
 <div align="center">
-  <img src="../assets/key_based_algo/Trie/trie-node-hash-table.png" width=550"/>
+  <img src="../../assets/key_based_algo/Trie/trie-node-hash-table.png" width=550"/>
   <p style="font-size: 10px;">Trie의 노드 Hash Map 구현 방식</p>
 </div>
 
