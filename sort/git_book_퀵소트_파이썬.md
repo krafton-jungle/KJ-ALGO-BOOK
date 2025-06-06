@@ -94,9 +94,7 @@ quick_sort([64, 34, 25, 12, 22, 11, 90])
 
 ```python
 def quick_sort(arr):
-    """
-    가장 기본적인 퀵정렬 구현
-    """
+    # 가장 기본적인 퀵정렬 구현
     if len(arr) <= 1:
         return arr
     
@@ -119,9 +117,7 @@ print(f"정렬: {sorted_arr}")
 
 ```python
 def lomuto_partition(arr, low, high):
-    """
-    Lomuto 파티션: 마지막 원소를 피벗으로 사용
-    """
+    # Lomuto 파티션: 마지막 원소를 피벗으로 사용
     pivot = arr[high]  # 마지막 원소를 피벗으로 선택
     i = low - 1        # 작은 원소들의 인덱스
     
@@ -135,9 +131,7 @@ def lomuto_partition(arr, low, high):
     return i + 1
 
 def quick_sort_inplace(arr, low=0, high=None):
-    """
-    제자리 퀵정렬
-    """
+    # 제자리 퀵정렬
     if high is None:
         high = len(arr) - 1
     
@@ -162,9 +156,7 @@ print(f"정렬: {arr}")
 import random
 
 def random_partition(arr, low, high):
-    """
-    랜덤 피벗을 사용한 파티션
-    """
+    # 랜덤 피벗을 사용한 파티션
     # 랜덤 인덱스 선택 후 마지막과 교환
     random_index = random.randint(low, high)
     arr[random_index], arr[high] = arr[high], arr[random_index]
@@ -172,9 +164,7 @@ def random_partition(arr, low, high):
     return lomuto_partition(arr, low, high)
 
 def quick_sort_random(arr, low=0, high=None):
-    """
-    랜덤 피벗을 사용한 퀵정렬 (최악의 경우 방지)
-    """
+    # 랜덤 피벗을 사용한 퀵정렬 (최악의 경우 방지)
     if high is None:
         high = len(arr) - 1
     
