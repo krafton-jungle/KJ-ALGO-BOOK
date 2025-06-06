@@ -128,7 +128,7 @@ class HashTable:
         return "{" + ", ".join(items) + "}"
 
 ```
-## 토막 상식!
+## 참고
 - 파이썬의 hash() 함수는 내부적으로 32비트 또는 64비트 정수를 반환한다.
 - 이 값은 음수도 포함될 수 있다.
 - 하지만 배열의 인덱스로 사용하기 위해서는 양수의 정수로 변환해야 한다.
@@ -224,3 +224,41 @@ class Trie:
 | Trie | `O(L)` | `O(L)` | `O(L)` | `Σ(알파벳^레벨)`<br>(희소 시 낭비) |
 
 ---
+
+## 해시 함수란
+
+해시 함수(hash function) 또는 해시 알고리즘(hash algorithm) 또는 해시함수알고리즘(hash函數algorithm)은 임의의 길이의 데이터를 고정된 길이의 데이터로 매핑하는 함수이다. 해시 함수에 의해 얻어지는 값은 해시 값, 해시 코드, 해시 체크섬 또는 간단하게 해시라고 한다. 그 용도 중 하나는 해시 테이블이라는 자료구조에 사용되며, 매우 빠른 데이터 검색을 위한 컴퓨터 소프트웨어에 널리 사용된다.
+
+## 파이썬의 hashlib 사용하기
+파이썬에서는 hashlib 모듈을 사용해서 파일의 해시값을 얻을 수 있다. hashlib은 파이썬에서 기본적으로 제공하는 모듈이므로 따로 설치할 필요가 없다.
+
+- hashlib에서 제공하는 생성자는 아래와 같다.
+
+```
+sha1(), sha224(), sha256(), sha384(), sha512(), sha3_224(), sha3_256(), sha3_384(), sha3_512(), shake_128(), shake_256(), blake2b()
+
+```
+
+## hashlib 용법
+
+
+```python
+
+import hashlib
+m = hashlib.sha256()
+m.update(b"Nobody inspects")
+m.update(b" the spammish repetition")
+m.digest()
+
+m.hexdigest()
+
+```
+
+## References
+
+- [what is hashing](https://www.geeksforgeeks.org/what-is-hashing/)
+- [해시함수란](https://ko.wikipedia.org/wiki/%ED%95%B4%EC%8B%9C_%ED%95%A8%EC%88%98)
+
+
+
+
