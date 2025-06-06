@@ -25,9 +25,10 @@
 
   <div align="center">
 
-  <img src="assets/time_complexity_chart.png" width="500"/>
+  <img src="assets/time_complexity_chart.png" width="600"/>
 
-  <small>시간/공간 복잡도 속도 비교 차트</small>
+  <br>
+  <sub>단계별 처리 과정</sub>
 
   </div>
 
@@ -190,9 +191,11 @@ function fibonacci(n) {
 # 7. 정렬별 시간&공간 복잡도 
 <div align="center">
 
-  <img src="assets/sorting_time_space_complexity.png" width="500"/>
+  <img src="assets/sorting_time_space_complexity.png" width="600"/>
   <small>시간/공간 복잡도 속도 비교 차트</small>
 
+  <br>
+  <sub>단계별 처리 과정</sub>
   </div>
 
 # 8. 마무리 요약
