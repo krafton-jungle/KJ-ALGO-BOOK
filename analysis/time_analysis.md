@@ -22,7 +22,7 @@
     - 이 증가량을 성장률(growth rate)이라고 한다.
     - 이 성장률을 통해 알고리즘이 얼마나 효율적인지 비교할 수 있다.
 
-
+  ![시간/공간 복잡도 차트](assets/time_complexity_chart.png)
 <br>
 
 
