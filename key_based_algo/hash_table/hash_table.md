@@ -143,98 +143,6 @@ hash("major")% N → 인덱스 5번 버킷 → ("major", "Computer Science")
 
 ```
 
-<!--
-그런데, 여기서 **충돌 해결 전략**에 따라 배열 활용 방식이 달라진다.
-이번 장에서는 대표적인 두가지 방법에 대해서만 설명한다.
-
-### **1.체이닝(Chaining)**:
-
-!['체이닝 이미지'](../assets/key_based_algo/Hash_Table/hashtable_chaining.png)
-
-체이닝 기법은 같은 인덱스에 여러 데이터를 저장할 수 있도록, 해당 버킷에 연결 리스트를 두는 방법이다.체이닝은 구현이 간단하고 삭제 연산이 유리하다.
-
-**간단 예시**
-
-```python
-table = [[] for _ in range(8)]
-
-def h(k): return k % 8
-
-table[h(10)].append(("A", 10))  # 10 % 8 = 2 → table[2]
-table[h(18)].append(("B", 18))  # 18 % 8 = 2 → table[2] 충돌 → 리스트에 추가
-```
-
-**결과구조**
-
-```python
-table = [
-    [],        # index 0
-    [],        # index 1
-    [("A", 10), ("B", 18)],  # index 2 → 충돌난 값들이 리스트로 연결됨
-    [], [], [], [], []
-]
-```
-
-### **2.오픈 어드레싱(Open Addressing)**:
-
-!['Openadd 이미지'](../assets/key_based_algo/Hash_Table/hashtable_openadd.png)
-
-충돌이 발생하면, 다른 빈 버킷을 찾아 이동하여 저장한다. 모든 데이터는 '해시 테이블 내부'에 저장되는 점이 체이닝과 다른 점이다.
-오픈 어드레싱 방법은, 저장 공간이 한정되어 있기 때문에 해시 테이블에 데이터가 많이 차 있는 경우 성능이 급격히 저하될 수 있다.
-
-충돌 해결을 위한 방식으로는 다음과 같은 기법들이 있다:
-
-### **2-1.선형 탐사**:
-
-!['선형탐사 이미지'](../assets/key_based_algo/Hash_Table/lenear_probing.webp)
-
-선형탐사는 가장 기본적인 충돌해결기법으로, 위에서 설명한 기본적인 동작방식이다. 바로 다음 칸부터 차례대로 탐색한다.
-
-예시:
-
-```python
-table = [None] * 8
-def h(k): return k % 8
-
-# 10 → 2번 칸
-# 18 → 2번 충돌 → 3번 빈칸 사용
-table[h(10)] = "A"     # table[2] = "A"
-table[(h(18)+1) % 8] = "B"   # table[3] = "B"
-```
-
-### **2-2.제곱 탐사**:
-
-!['제곱탐사 이미지'](../assets/key_based_algo/Hash_Table/quad_probing.png)
-
-곱탐사는 말 그대로 제곱 간격으로 간격을 점점 넓혀가며 탐색한다. 선형탐사에 비해 더 폭넓게 탐사하기 때문에 탐색과 삭제에 효율적일 수 있다.
-
-### **2-3.더블 해싱**:
-
-!['이중 해싱 이미지'](../assets/key_based_algo/Hash_Table/doublehashfunction.png)
-
-해시 충돌이 발생했을 때, 두 번째 해시 함수를 이용해 탐색 간격을 계산하고 그 간격만큼 떨어진 버킷에 저장한다.
-
-예시:
-
-```python
-버킷 수 = 13 # Mod 13
-
-R = 7 # 보조 해시용 소수
-
-#해시 함수 정의:
-Hash1(key) = key % 13
-
-Hash2(key) = 7 - (key % 7)
-
-Hash1(36) = 36 % 13 = 10   #10번인덱스에 저장 (충돌 X)
-
-Hash1(10) = 10 % 13 = 10 # 충돌 발생!
-
-Hash2(10) = 7 - (10 % 7) = 4  # 더블해싱으로 충돌 해결
-
-```
--->
-
 # 해시 테이블의 시간복잡도, 공간복잡도
 
 ### 시간복잡도
@@ -291,5 +199,5 @@ def first_non_repeating_char(string):
 
 # References
 
-- https://www.geeksforgeeks.org/hash-table-data-structure/
-- https://en.wikipedia.org/wiki/Hash_table
+- [geeks for geeks](https://www.geeksforgeeks.org/hash-table-data-structure/)
+- [wikipedia](https://en.wikipedia.org/wiki/Hash_table)
