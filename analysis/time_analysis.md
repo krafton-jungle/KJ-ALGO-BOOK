@@ -40,7 +40,7 @@
 
  <br>
  <br>
- <sub>단계별 처리 과정</sub>
+ <sub>알고리즘 실행시간 비교 차트</sub>
 
 
  </div>
@@ -266,7 +266,7 @@ function fibonacci(n) {
 
 
  <br>
- <sub>단계별 처리 과정</sub>
+ <sub>정렬 알고리즘 시간, 공간 복잡도 비교 차트</sub>
 </div>
 
 
