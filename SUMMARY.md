@@ -14,6 +14,9 @@
 - [그래프 개념 / DFS / BFS](그래프_DFS_BFS/README.md)
 - [벨만 포드 / 위상정렬](벨만포드_위상정렬/README.md)
 - [다익스트라 / 플로이드 워샬](다익스트라_플로이드/README.md)
-- [트라이 / 최소 신장 트리](트라이_최소신장트리/README.md)
+- [트라이 / 해시 테이블](key_based_algo/README.md)
+  - [트라이](key_based_algo/trie/trie.md)
+  - [해시 테이블](key_based_algo/hash_table/hash_table.md)
 - [정수론](./정수론/README.md)
+
 
