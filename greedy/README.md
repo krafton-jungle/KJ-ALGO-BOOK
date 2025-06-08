@@ -1,12 +1,12 @@
 # README
 
 - [소개](README.md)
-  - [챕터 1.1: 예시문제로 이해-1](page1.md)
-  - [챕터 1.2: 예시문제로 이해-2](page2.md)
-  - [챕터 1.3: 예시문제로 이해-3](page3.md)
+  - [챕터 1.1: 거스름돈 문제](page1.md)
+  - [챕터 1.2: 배낭 문제](page2.md)
+  - [챕터 1.3: 회의실 배정 문제](page3.md)
   - [챕터 2: 그리디 알고리즘 응용](page4.md)
-  - [마치며..](end.md)
-# 그리디 알고리즘 (greedy Algorithm)
+
+# 그리디 알고리즘 (Greedy Algorithm)
 
 - 그리디 알고리즘은, 매 순간 현재 상황에서 **가장 좋아 보이는 선택**을 반복하는 알고리즘이다.
   - 이러한 선택을 **탐욕적 선택**이라 부른다.
@@ -20,12 +20,9 @@
 예제 문제와 함께 탐욕적 선택 속성을 알아보자.
 
 
-
-
-
 ## 참고 자료
 
-> #### Chapter.1
   - [YouTube <동빈나> 채널 - (이코테 2021 강의 몰아보기) 2. 그리디 & 구현](https://www.youtube.com/watch?v=2zjoKjt97vQ)
   - [박경록 - 코딩 테스트 합격자 되기 <파이썬 편>](https://goldenrabbit.co.kr/product/pythonpass/)
+   - [Do it! 자료구조와 함께 배우는 알고리즘 입문 (파이썬 편) - P.204](https://www.yes24.com/Product/Goods/91219874/)
 
