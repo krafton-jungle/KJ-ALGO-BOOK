@@ -1,20 +1,10 @@
 # 다익스트라(Dijkstra) 알고리즘
 
-단일 시작점(노드)에서 모든 노드까지의 최단 경로를 구하는 알고리즘인 다익스트라 알고리즘(Dijkstra’s Algorithm)의 핵심 개념과 동작 방식을 이해한다.
+단일 시작점(정점)에서 모든 정점까지의 최단 경로를 구하는 알고리즘인 다익스트라 알고리즘(Dijkstra’s Algorithm)의 핵심 개념과 동작 방식을 이해한다.
 
 > 다익스트라 알고리즘은 가중치가 있는 그래프에서 **최단 경로 문제를 해결하는 대표적인 방법이다.**
-
 <br>
 
-# 목차
-| 항목 | 설명 |
-|--------|--------|
-| [핵심 내용 정리](https://jungle9.gitbook.io/kj-book-guide/algorithm#key)   | 알고리즘 개념, DP, 그리디 알고리즘, 음의 간선   |
-| [그래프란](https://jungle9.gitbook.io/kj-book-guide/algorithm#graph)   | 알고리즘을 이해하는데 필요한 개념  |
-| [알고리즘 실행 과정](https://jungle9.gitbook.io/kj-book-guide/algorithm#excute) | 알고리즘을 시각화 자료와 함께 보여준다. |
-| [알고리즘 구현 코드](https://jungle9.gitbook.io/kj-book-guide/algorithm#python) | 파이썬으로 구현한 알고리즘 예시 코드 |
-| [참고](https://jungle9.gitbook.io/kj-book-guide/algorithm#refer) | 자료 출처 및 더 찾아보기
-<br>
 # 핵심 키워드 정리
 - 정의: [예시] DP 혹은 그리디 알고리즘으로 불리는 다익스트라는 사용한 최단 경로(비용)를 찾는 알고리즘이다.
 
@@ -34,9 +24,9 @@
 <br>
 
 # 다익스트라란
-- DP 혹은 그리디 알고리즘으로 불리는 다익스트라 알고리즘은 하나의 노드로부터 최단 경로(가장 비용이 적은 경로)를 찾는 알고리즘이다.
+- DP 혹은 그리디 알고리즘으로 불리는 다익스트라 알고리즘은 하나의 정점로부터 최단 경로(가장 비용이 적은 경로)를 찾는 알고리즘이다.
 
-- 하나의 특정 노드에서 다른 모든 노드로 가는 최단 경로를 알려준다.
+- 하나의 특정 정점에서 다른 모든 정점로 가는 최단 경로를 알려준다.
 
 - 그래프의 방향이 상관없는 무향 그래프이다.
 
@@ -48,40 +38,45 @@
     - 예: 최단 경로(도시에서 모든 도시까지의 최소 비용)
 
 # 알고리즘 실행 과정
-빨간색 글씨로 표시되는 값이 노드 방문 시 변경되는 최소값이다.
-### 노드 방문 전 기본 값
-![노드 방문 전 기본 값](images/Dijkstra_1.png)
+빨간색 글씨로 표시되는 값이 정점 방문 시 변경되는 최소값이다.
+<br><br>
+![Dijkstra_gif](images/Dijkstra.gif)
+
+<!-- ### 정점 방문 전 기본 값
+![정점 방문 전 기본 값](images/Dijkstra_1.png)
 <br><br><br>
 
-### 1번 노드 -> 1번 노드(본인) 방문
-![1번 노드 -> 2번 노드 방문](images/Dijkstra_2.png)
+### 1번 정점 -> 1번 정점(본인) 방문
+![1번 정점 -> 2번 정점 방문](images/Dijkstra_2.png)
 <br><br><br>
 
-### 1번 노드 -> 2번 노드 방문
-![1번 노드 -> 4번 노드 방문](images/Dijkstra_3.png)
+### 1번 정점 -> 2번 정점 방문
+![1번 정점 -> 4번 정점 방문](images/Dijkstra_3.png)
 <br><br><br>
 
-### 1번 노드 -> 4번 노드 방문
-![1번 노드 -> 3번 노드 방문](images/Dijkstra_4.png)
+### 1번 정점 -> 4번 정점 방문
+![1번 정점 -> 3번 정점 방문](images/Dijkstra_4.png)
 <br><br><br>
 
-### 1번 노드 -> 3번 노드 방문
-![1번 노드 -> 4번 노드 방문](images/Dijkstra_5.png)
+### 1번 정점 -> 3번 정점 방문
+![1번 정점 -> 4번 정점 방문](images/Dijkstra_5.png)
 <br><br><br>
 
-### 1번 노드 -> 5번 노드 방문
-![1번 노드 -> 5번 노드 방문](images/Dijkstra_6.png)
-<br><br><br>
+### 1번 정점 -> 5번 정점 방문
+![1번 정점 -> 5번 정점 방문](images/Dijkstra_6.png) -->
+<br>
 
 > 초기값
 - [0, 3, 6, 1, inf]
-> 1번 노드 기준 모든 정점을 방문한 후
+<br>
+<br>
+> 1번 정점 기준 모든 정점을 방문한 후
 - [0, 3, 5, 1, 3]
 <br><br>
 
 # 구현 예시 (Python)
 
-### 예: 다익스트라 선형 탐색
+### 다익스트라 - 선형 탐색
 ``` python
 iterator = 5
 inf = float('inf')
@@ -97,7 +92,7 @@ g = [
 visited = [False] * iterator
 distances = [0] * iterator 
 
-# 가장 최소 거리를 가지는 노드를 반환
+# 가장 최소 거리를 가지는 정점를 반환
 def getSmallIndex():
     min_distance = float('inf')
     index = 0
@@ -122,7 +117,7 @@ def dijkstra(start):
         visited[currentIndex] = True
         for j in range(iterator):
             if not visited[j]:
-            # 현재 노드에서 방문하지 않은 모든 노드를 순회하면서 
+            # 현재 정점에서 방문하지 않은 모든 정점를 순회하면서 
             # 이전에 저장되어 있는 거리와 현재 계산한 거리를 비교하여 새로운 값을 넣어준다.
                 if distances[currentIndex] + g[currentIndex][j] < distances[j]:
                     distances[j] = distances[currentIndex] + g[currentIndex][j]
@@ -134,7 +129,7 @@ for i in range(iterator):
     print(f"{distances[i]}", end=" ")
 ```
 
-### 예: 다익스트라 우선순위 큐
+### 다익스트라 - 우선순위 큐
 ``` python
 import heapq
 import sys
@@ -157,7 +152,7 @@ def dijkstra(V, edges, src):
     # 인접 행렬 함수 호출
     adj = constructAdj(edges, V)
 
-    # 우선순위 큐 for 노드를 담을 배열
+    # 우선순위 큐 for 정점를 담을 배열
     pq = []
     
     # 최소 거리를 측정하기 위해 최대 거리로 V 수만큼 설정
@@ -168,12 +163,12 @@ def dijkstra(V, edges, src):
 
 
     while pq:
-        # 시작 노드를 가져오기
+        # 시작 정점를 가져오기
         u = heapq.heappop(pq)[1]
 
-        # 인접한 모든 노드들을 순회
+        # 인접한 모든 정점들을 순회
         for x in adj[u]:
-            # 노드와 가중치를 가져온다.
+            # 정점와 가중치를 가져온다.
             v, weight = x[0], x[1]
 						
             # 현재까지 발견한 최단 거리와 현재 거리를 비교
@@ -187,24 +182,20 @@ V = 5
 src = 0
 
 # 엣지 목록 : {u, v, weight}
-edges =[[0, 1, 4], [0, 2, 8], [1, 4, 6], [2, 3, 2], [3, 4, 10]]
+edges = [[0, 1, 3], [0, 2, 6], [0, 3, 1], [1, 2, 2], [1, 4, 1], [2, 3, 8], [2, 4, 2], [3, 4, 2]]
 
 result = dijkstra(V, edges, src)
 
 print(' '.join(map(str, result)))
 ```
-알고리즘을 구현한 코드를 보여줍니다. 파이썬을 사용하여 구현합니다.
+파이썬을 사용하여 알고리즘을 구현한 코드
 
 # 참고
 - 참고한 자료
 
-    - GeeksforGeeks의 Dijkstra's Algorithm
+    - [GeeksforGeeks의 Dijkstra's Algorithm](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/)
 
-    - 나무위키 - 다익스트라
-
-- 이미지 출처
-
-    - 외부 이미지 사용 시 라이선스 확인 필요
+    - [나무위키 - 다익스트라](https://namu.wiki/w/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 - 추가로 참고하면 좋은 자료
 
@@ -213,12 +204,3 @@ print(' '.join(map(str, result)))
     - 위키백과 - 다익스트라
 
     - CP-Algorithms - Dijkstra
-
-
-외부 콘텐츠를 인용할 경우, 반드시 출처를 명시하고 링크를 제공할 것
-
-이미지, 도표 등은 직접 제작하거나, 라이선스가 허용된 자료만 사용할 것
-
-본 문서의 내용은 깃북을 작성하기 위한 가이드일 뿐 반드시 지켜야 하는 내용은 아닙니다. 문서 작성 시 도움이 되는 선에서 참고하시면 됩니다.
-
-
