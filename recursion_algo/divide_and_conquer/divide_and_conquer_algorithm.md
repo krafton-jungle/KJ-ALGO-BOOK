@@ -47,7 +47,7 @@
 
 > Merge Sort 예제를 통해 단계별 구조를 시각적으로 설명한다
 
-![분할정복 흐름도](attachment:2dac7ee1-48d6-4c38-a4d8-6875c896012e:분할정복_흐름도.png)
+![분할 정복 흐름도](assets/recursion_algo/divide_and_conquer/divide_conquer_flow.png)
 
 분할 정복 알고리즘은 다음과 같은 과정을 통해 문제를 해결한다.
 
