@@ -6,6 +6,8 @@
 - [백트래킹 / 분할정복](recursion_algo/README.md)
 - [힙 정렬 / 퀵 정렬](sort/README.md)
 - [DP](dynamic_programming/README.md)
+  - [사용조건](dynamic_programming/condition.md)
+  - [구현방법](dynamic_programming/implementation.md)
 - [그리디](greedy/README.md)
 - [이진 검색 트리](tree_algo/README.md)
 - [트리 개념 / B-Tree](tree_concept/README.md)
