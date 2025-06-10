@@ -15,6 +15,67 @@
 
 2) 간선을 하나씩 살핀다. 간선을 MST에 추가했을 때 MST에 사이클이 생기지 않으면 추가한다. 사이클이 생긴다면 다음 간선으로 넘어간다.
 
+**특징**
+
+시간 복잡도: O(E log E) - 간선 정렬이 주요 비용  
+공간 복잡도: O(V) - Union-Find 자료구조  
+희소 그래프(간선이 적은 그래프)에 효율적  
+간선 중심의 접근법  
+
+```
+class UnionFind:
+    def __init__(self, n):
+        self.parent = list(range(n))
+        self.rank = [0] * n
+    
+    def find(self, x):
+        if self.parent[x] != x:
+            self.parent[x] = self.find(self.parent[x])  # 경로 압축
+        return self.parent[x]
+    
+    def union(self, x, y):
+        px, py = self.find(x), self.find(y)
+        if px == py:
+            return False
+        
+        # 랭크 기반 합집합
+        if self.rank[px] < self.rank[py]:
+            px, py = py, px
+        self.parent[py] = px
+        if self.rank[px] == self.rank[py]:
+            self.rank[px] += 1
+        return True
+
+def kruskal_mst(n, edges):
+    """
+    크루스칼 알고리즘으로 최소 신장 트리 구하기
+    
+    Args:
+        n: 정점의 개수
+        edges: [(가중치, 정점1, 정점2), ...] 형태의 간선 리스트
+    
+    Returns:
+        (총 가중치, MST 간선 리스트)
+    """
+    # 간선을 가중치 순으로 정렬
+    edges.sort()
+    
+    uf = UnionFind(n)
+    mst_edges = []
+    total_weight = 0
+    
+    for weight, u, v in edges:
+        if uf.union(u, v):  # 사이클이 생기지 않으면
+            mst_edges.append((u, v, weight))
+            total_weight += weight
+            
+            # MST는 n-1개의 간선을 가짐
+            if len(mst_edges) == n - 1:
+                break
+    
+    return total_weight, mst_edges
+```
+
 ### 프림(Prim) 알고리즘
 
 그래프의 노드를 하나씩 늘리며 MST를 만든다. 정점을 늘릴 때 정점과 연결된 간선의 가중치가 최소인 것부터 추가하는 탐욕법을 이용한다.
@@ -30,6 +91,63 @@
 3) 최소 힙에서 꺼낸 정점이 MST에 포함되어 있지 않다면 MST에 추가하고 **2 단계**를 진행한다. 만약 꺼낸 정점이 MST에 포함되어 있으면 넘어간다.
 
 4) 최소 힙이 빌 때까지 **3 단계**를 반복한다.
+
+**특징**
+
+시간 복잡도: O(E log V) - 우선순위 큐 사용 시  
+공간 복잡도: O(V) - 방문 배열과 힙  
+밀집 그래프(간선이 많은 그래프)에 효율적  
+정점 중심의 접근법  
+
+```
+import heapq
+from collections import defaultdict
+
+def prim_mst(n, graph, start=0):
+    """
+    프림 알고리즘으로 최소 신장 트리 구하기
+    
+    Args:
+        n: 정점의 개수
+        graph: {정점: [(가중치, 인접정점), ...]} 형태의 인접 리스트
+        start: 시작 정점 (기본값: 0)
+    
+    Returns:
+        (총 가중치, MST 간선 리스트)
+    """
+    visited = [False] * n
+    min_heap = [(0, start, -1)]  # (가중치, 현재정점, 부모정점)
+    mst_edges = []
+    total_weight = 0
+    
+    while min_heap:
+        weight, current, parent = heapq.heappop(min_heap)
+        
+        if visited[current]:
+            continue
+            
+        visited[current] = True
+        total_weight += weight
+        
+        if parent != -1:  # 시작 정점이 아닌 경우
+            mst_edges.append((parent, current, weight))
+        
+        # 현재 정점과 연결된 모든 간선을 힙에 추가
+        for next_weight, next_vertex in graph[current]:
+            if not visited[next_vertex]:
+                heapq.heappush(min_heap, (next_weight, next_vertex, current))
+    
+    return total_weight, mst_edges
+
+def build_graph_from_edges(edges):
+    """간선 리스트로부터 인접 리스트 그래프 생성"""
+    graph = defaultdict(list)
+    for weight, u, v in edges:
+        graph[u].append((weight, v))
+        graph[v].append((weight, u))
+    return graph
+```
+
 
 ## 최소 신장 트리 활용 분야
 
