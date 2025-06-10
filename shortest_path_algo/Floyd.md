@@ -1,12 +1,4 @@
 # 플로이드 와샬 알고리즘
-#### 이 장에서 다룰 내용
-1. 모든 쌍 최단 경로 문제
-2.  플로이드 와샬의 개념
-3. 알고리즘 수행 과정
-4. 구현 코드
-5. 다익스트라 방식과 비교
-6. 결론
-7. 응용 분야
 
 ## 모든 쌍 최단 경로 문제
 
@@ -15,7 +7,7 @@
 >플로이드 와샬은 모든 쌍 최단 경로 문제를 해결하는 대표 알고리즘이다.
     
 <p align= "center">
-    <img src ="./images/1-1.png" width="250px",height="200px">
+    <img src ="./images/1-1.png" width="420px",height="200px">
 </p>
     
 ## 플로이드 와샬의 개념
@@ -23,7 +15,7 @@
 > 작은 그래프에서 부분 문제를 찾는 것이 핵심이다.
 
 <p align= "center">
-    <img src ="./images/2-1.png" width="250px",height="200px">
+    <img src ="./images/2-1.png" width="320px",height="260px">
 </p>
 
 그림 <2.1>은 3개의 정점과 3개의 간선으로 이루어진 작은 예시 그래프이다.
@@ -34,7 +26,7 @@
 - 모든 점을 경유 가능한 점들로 고려하면, 모든 점에 대한 각 쌍의 최단 경로를 찾을 수 있다.
 
 <p align= "center">
-    <img src ="./images/2-2.png" width="250px",height="200px">
+    <img src ="./images/2-2.png" width="320px",height="260px">
 </p>
 
 
@@ -47,57 +39,13 @@
    
 > 플로이드 와샬 알고리즘의 장점은 구현이 간단하고 쉽다는 점이다.
 
-```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-using namespace std;
-
-const int INF = 1e9; // 무한대 값 (충분히 큰 값으로 설정)
-int n, m; // n: 정점 수, m: 간선 수
-vector<vector<int>> dist;
-
-int main() {
-
-    cin >> n >> m;
-    dist.assign(n + 1, vector<int>(n + 1, INF));
-
-    // 자기 자신으로 가는 비용은 0
-    for (int i = 1; i <= n; i++) {
-        dist[i][i] = 0;
-    }
-
-    // 간선 정보 입력
-    for (int i = 0; i < m; i++) {
-        int u, v, w;
-        cin >> u >> v >> w;
-        dist[u][v] = min(dist[u][v], w); // 중복된 간선이 있을 때 사용된다.
-    }
-
-    // Floyd-Warshall 알고리즘
-    for (int k = 1; k <= n; k++) {
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
-                if (dist[i][k] < INF && dist[k][j] < INF) {
-                    dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
-                }
-            }
-        }
-    }
-
-    // 출력
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= n; j++) {
-            if (dist[i][j] == INF) cout << "INF ";
-            else cout << dist[i][j] << " ";
-        }
-        cout << '\n';
-    }
-
-    return 0;
-}
-
+```python
+# 플로이드 와샬 알고리즘 수행
+for k in range(n):         # 거쳐가는 노드
+    for i in range(n):     # 출발 노드
+        for j in range(n): # 도착 노드
+            if graph[i][k] + graph[k][j] < graph[i][j]:
+                graph[i][j] = graph[i][k] + graph[k][j]
 ```
 
 ## 수행 과정
