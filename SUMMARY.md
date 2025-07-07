@@ -15,5 +15,6 @@
 - [벨만 포드 / 위상정렬](graph_algo/README.md)
 - [다익스트라 / 플로이드 워샬](shortest_path_algo/README.md)
 - [트라이 / 최소 신장 트리](key_based_algo/README.md)
+  - [트라이](key_based_algo/trie/trie.md)
+  - [해시 테이블](key_based_algo/hash_table/hash_table.md)
 - [정수론](number_theory/README.md)
-
