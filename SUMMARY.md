@@ -1,5 +1,4 @@
 # Summary
-
 - [소개](README.md)
 - [시간 복잡도 / 공간 복잡도](analysis/README.md)
     - [시간 복잡도](analysis/time_analysis.md)
@@ -18,6 +17,3 @@
   - [트라이](key_based_algo/trie/trie.md)
   - [해시 테이블](key_based_algo/hash_table/hash_table.md)
 - [정수론](./정수론/README.md)
-
-
-
