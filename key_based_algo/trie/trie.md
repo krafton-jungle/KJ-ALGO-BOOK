@@ -1,6 +1,27 @@
+<<<<<<< HEAD
 # 트라이(Trie)란
 
 트라이의 개념을 알아보기 전에, 트리의 개념을 간단하게 알아본다.
+=======
+# 📑 목차
+
+- [📑 목차](#-목차)
+- [트리(Tree)란](#트리tree란)
+- [트라이(Trie)의 정의](#트라이trie의-정의)
+- [트라이(Trie)의 구조](#트라이trie의-구조)
+- [트라이는 어디에 사용되고, 왜 필요한가?](#트라이는-어디에-사용되고-왜-필요한가)
+- [트라이 자료구조를 사용한 알고리즘](#트라이-자료구조를-사용한-알고리즘)
+- [트라이의 구현 방식](#트라이의-구현-방식)
+  - [배열](#배열)
+  - [해시 맵](#해시-맵)
+- [Trie 자료구조의 시간복잡도, 공간복잡도](#trie-자료구조의-시간복잡도-공간복잡도)
+  - [시간 복잡도](#시간-복잡도)
+  - [공간 복잡도](#공간-복잡도)
+    - [간단한 예시 (배열 vs 해시맵)](#간단한-예시-배열-vs-해시맵)
+    - [References](#references)
+
+> 트라이의 개념을 알아보기 전에, 트리의 개념을 간단하게 알아본다.
+>>>>>>> origin/edit
 
 # 트리(Tree)란
 
@@ -17,13 +38,21 @@
   <p style="font-size: 10px;">Tree 구조의 모습</p>
 </div>
 
+<<<<<<< HEAD
 # 트라이의 정의
+=======
+# 트라이(Trie)의 정의
+>>>>>>> origin/edit
 
 트라이는, 사전(dictionary)이나 집합(set)에 있는 문자열을 저장하고 검색하는 데 사용되는 특수한 탐색 트리 자료구조이다.
 
 트라이 자료 구조는 문자열들의 집합을 저장하고, 이들에 대해 효율적인 검색, 삽입(insert), 삭제(delete), 접두사 검색(prefix search), 그리고 모든 문자열을 정렬된 순서대로 순회(sorted traversal)하는 기능을 제공하는 트리 기반 자료 구조이다. “Trie”라는 이름은 reTRIEval(검색, 회수)의 중간 부분에서 유래한 것으로, 무언가를 찾아내거나 얻어낸다는 의미를 내포하고 있다.
 
+<<<<<<< HEAD
 # 트라이의 구조
+=======
+# 트라이(Trie)의 구조
+>>>>>>> origin/edit
 
 이진 탐색 트리(binary search tree)와는 달리, 트라이의 노드는 자신과 연관된 키(key)를 저장하지 않는다.
 
@@ -42,6 +71,7 @@
 
 <div align="center">
   <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220828232752/Triedatastructure1.png" width="350"/>
+<<<<<<< HEAD
   <p style="font-size: 10px;">Trie 자료구조</p>
 </div>
 
@@ -52,13 +82,29 @@ Trie 자료 구조는 데이터를 저장하고 검색하기 위해 사용됩니
 Trie(트라이) 자료 구조는 자동 완성(autocomplete), 철자 검사(spell checking), IP 라우팅(IP routing)과 같은 작업에 특히 효과적이다.
 
 # Trie 자료구조를 사용한 알고리즘
+=======
+  <p style="font-size: 10px;">트라이 자료구조</p>
+</div>
+
+# 트라이는 어디에 사용되고, 왜 필요한가?
+
+트라이 자료 구조는 데이터를 저장하고 검색하기 위해 사용됩니다. 이러한 작업은 해시 테이블(Hash Table) 같은 다른 자료 구조를 사용해서도 수행할 수 있지만, Trie는 이러한 연산을 해시 테이블보다 더 효율적으로 수행할 수 있다.
+
+Trie(트라이) 자료 구조는 자동 완성(autocomplete), 철자 검사(spell checking), IP 라우팅(IP routing)과 같은 작업에 특히 효과적이다.
+
+# 트라이 자료구조를 사용한 알고리즘
+>>>>>>> origin/edit
 
 1. **자동 완성 기능(Autocomplete Feature)**
 
    - 사용자가 검색 상자에 입력하는 내용에 따라 추천 결과를 제공합니다. Trie 자료 구조는 자동 완성 기능을 구현하는 데 사용된다.
 
 <div align="center">
+<<<<<<< HEAD
   <img src="../assets/key_based_algo/Trie/autocompletion.png", width="300"/>
+=======
+  <img src="../../assets/key_based_algo/Trie/autocompletion.png", width="300"/>
+>>>>>>> origin/edit
   <p style="font-size: 10px;">Trie 자료구조를 활용한 자동완성 기능</p>
 </div>
 
@@ -87,7 +133,11 @@ Trie(트라이) 자료 구조는 자동 완성(autocomplete), 철자 검사(spel
 ## 배열
 
 <div align="center">
+<<<<<<< HEAD
   <img src="../assets/key_based_algo/Trie/trie-node-array.png" width=550"/>
+=======
+  <img src="../../assets/key_based_algo/Trie/trie-node-array.png" width=550"/>
+>>>>>>> origin/edit
   <p style="font-size: 10px;">Trie의 노드 Array 구현 방식</p>
 </div>
 
@@ -96,7 +146,11 @@ Trie(트라이) 자료 구조는 자동 완성(autocomplete), 철자 검사(spel
 ## 해시 맵
 
 <div align="center">
+<<<<<<< HEAD
   <img src="../assets/key_based_algo/Trie/trie-node-hash-table.png" width=550"/>
+=======
+  <img src="../../assets/key_based_algo/Trie/trie-node-hash-table.png" width=550"/>
+>>>>>>> origin/edit
   <p style="font-size: 10px;">Trie의 노드 Hash Map 구현 방식</p>
 </div>
 
@@ -158,8 +212,16 @@ Trie(트라이) 자료 구조는 자동 완성(autocomplete), 철자 검사(spel
 
 ### References
 
+<<<<<<< HEAD
 - https://www.geeksforgeeks.org/introduction-to-trie-data-structure-and-algorithm-tutorials
 
 - https://en.wikipedia.org/wiki/Trie
 
 - https://www.youtube.com/watch?v=qA8l8TAMyig
+=======
+- [geeks for geeks](https://www.geeksforgeeks.org/introduction-to-trie-data-structure-and-algorithm-tutorials)
+
+- [wikipedia](https://en.wikipedia.org/wiki/Trie)
+
+- [youtube](https://www.youtube.com/watch?v=qA8l8TAMyig)
+>>>>>>> origin/edit
